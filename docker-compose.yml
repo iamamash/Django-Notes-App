@@ -1,6 +1,12 @@
-version : "3.3"
-services :
-  web :
-     build : .
-     ports :
-         - "8000:8000"
+version: "3.8"
+services:
+  my-django-notes-app:
+    container_name: "django-notes-app"
+    image: iamamash/django-notes-app:latest
+    ports:
+      - 8000:8000
+    volumes:
+      - django-notes-app-volume:/app
+
+volumes:
+  django-notes-app-volume:
