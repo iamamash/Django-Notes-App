@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: notes-app
+  namespace: notes-app-ns
+spec:
+  containers:
+  - name: notes-app
+    image: iamamash/django-notes-app:latest
+    ports:
+    - containerPort: 8000
